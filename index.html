@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شبكة المصطفى التعليمية</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">شبكة المصطفى التعليمية</h1>
+        <div class="profile-picture-container">
+            <img id="profile-picture" src="" alt="Profile Picture" class="profile-picture" style="display: none;">
+        </div>
+        <input type="file" id="upload-image" accept="image/*" onchange="previewImage(event)">
+    </header>
+    <main>
+        <div id="quiz-container">
+            <div id="quiz"></div>
+            <button id="prev" onclick="showPreviousQuestion()" style="display: none;">السابق</button>
+            <button id="next" onclick="showNextQuestion()">التالي</button>
+            <button id="submit" onclick="submitAnswer()">إرسال</button>
+        </div>
+        <div id="results"></div>
+        <div id="add-question">
+            <h2>إضافة سؤال</h2>
+            <input type="password" id="admin-password" placeholder="أدخل الرمز السري">
+            <button onclick="showAddQuestionForm()">إضافة سؤال جديد</button>
+            <div id="new-question-form" style="display: none;">
+                <input type="text" id="new-question" placeholder="السؤال">
+                <input type="text" id="new-answer-a" placeholder="الإجابة أ">
+                <input type="text" id="new-answer-b" placeholder="الإجابة ب">
+                <input type="text" id="new-answer-c" placeholder="الإجابة ج">
+                <select id="new-correct-answer">
+                    <option value="a">أ</option>
+                    <option value="b">ب</option>
+                    <option value="c">ج</option>
+                </select>
+                <input type="number" id="new-points" placeholder="النقاط">
+                <button onclick="addNewQuestion()">إضافة</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>🌟 حافظ على أحلامك كبيرة 🌟</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
